@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B39C2852404E9B500B46B28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B39C2842404E9B400B46B28 /* GoogleService-Info.plist */; };
 		0BE4BD9B2404E26D0057BE87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4BD9A2404E26D0057BE87 /* AppDelegate.swift */; };
 		0BE4BD9D2404E26E0057BE87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4BD9C2404E26E0057BE87 /* SceneDelegate.swift */; };
 		0BE4BD9F2404E26E0057BE87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4BD9E2404E26E0057BE87 /* ContentView.swift */; };
 		0BE4BDA12404E2740057BE87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BE4BDA02404E2740057BE87 /* Assets.xcassets */; };
 		0BE4BDA42404E2740057BE87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BE4BDA32404E2740057BE87 /* Preview Assets.xcassets */; };
 		0BE4BDA72404E2740057BE87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE4BDA52404E2740057BE87 /* LaunchScreen.storyboard */; };
+		5944B819905829CBC04B9902 /* Pods_OTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E63F9D57FDB619158F683DD /* Pods_OTP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B39C2842404E9B400B46B28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0BE4BD972404E26D0057BE87 /* OTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE4BD9A2404E26D0057BE87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BE4BD9C2404E26E0057BE87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		0BE4BDA32404E2740057BE87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0BE4BDA62404E2740057BE87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BE4BDA82404E2740057BE87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E63F9D57FDB619158F683DD /* Pods_OTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A861374198D2373610C00929 /* Pods-OTP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTP.release.xcconfig"; path = "Target Support Files/Pods-OTP/Pods-OTP.release.xcconfig"; sourceTree = "<group>"; };
+		DEFFAEF5F97C6FC479A65474 /* Pods-OTP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTP.debug.xcconfig"; path = "Target Support Files/Pods-OTP/Pods-OTP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5944B819905829CBC04B9902 /* Pods_OTP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				0BE4BD992404E26D0057BE87 /* OTP */,
 				0BE4BD982404E26D0057BE87 /* Products */,
+				2F7A84B84C3E5125B6B1DE1A /* Pods */,
+				4332D336100CCFD318C2BED2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +71,7 @@
 				0BE4BDA02404E2740057BE87 /* Assets.xcassets */,
 				0BE4BDA52404E2740057BE87 /* LaunchScreen.storyboard */,
 				0BE4BDA82404E2740057BE87 /* Info.plist */,
+				0B39C2842404E9B400B46B28 /* GoogleService-Info.plist */,
 				0BE4BDA22404E2740057BE87 /* Preview Content */,
 			);
 			path = OTP;
@@ -75,6 +85,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2F7A84B84C3E5125B6B1DE1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEFFAEF5F97C6FC479A65474 /* Pods-OTP.debug.xcconfig */,
+				A861374198D2373610C00929 /* Pods-OTP.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4332D336100CCFD318C2BED2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E63F9D57FDB619158F683DD /* Pods_OTP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BE4BDAB2404E2740057BE87 /* Build configuration list for PBXNativeTarget "OTP" */;
 			buildPhases = (
+				D6D22423D9226878F4F2CD30 /* [CP] Check Pods Manifest.lock */,
 				0BE4BD932404E26D0057BE87 /* Sources */,
 				0BE4BD942404E26D0057BE87 /* Frameworks */,
 				0BE4BD952404E26D0057BE87 /* Resources */,
+				6C3F6244237199C28B15F721 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +164,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BE4BDA72404E2740057BE87 /* LaunchScreen.storyboard in Resources */,
+				0B39C2852404E9B500B46B28 /* GoogleService-Info.plist in Resources */,
 				0BE4BDA42404E2740057BE87 /* Preview Assets.xcassets in Resources */,
 				0BE4BDA12404E2740057BE87 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6C3F6244237199C28B15F721 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OTP/Pods-OTP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OTP/Pods-OTP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OTP/Pods-OTP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6D22423D9226878F4F2CD30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OTP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0BE4BD932404E26D0057BE87 /* Sources */ = {
@@ -282,6 +355,7 @@
 		};
 		0BE4BDAC2404E2740057BE87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEFFAEF5F97C6FC479A65474 /* Pods-OTP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -301,6 +375,7 @@
 		};
 		0BE4BDAD2404E2740057BE87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A861374198D2373610C00929 /* Pods-OTP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
