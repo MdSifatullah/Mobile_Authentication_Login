@@ -10,10 +10,23 @@ import SwiftUI
 import Firebase
 
 struct ContentView: View {
+    @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
     var body: some View {
-        NavigationView{
-            
-            FirstPage()
+        VStack{
+            if status {
+                HomeView()
+            }else {
+                NavigationView{
+                    
+                    FirstPage()
+                }
+            }
+        }.onAppear{
+            NotificationCenter.default.addObserver(forName: NSNotification.Name("statusChange"), object: nil, queue: .main) { (_) in
+                let status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
+                
+                self.status = status
+            }
         }
     }
 }
@@ -75,6 +88,9 @@ struct FirstPage: View{
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
         }.padding()
+            .alert(isPresented: $alert) {
+                Alert(title: Text("Error"), message: Text(self.msg), dismissButton: .default(Text("Ok")))
+        }
     }
 }
 
@@ -113,7 +129,8 @@ struct SecondPage: View{
                                 self.alert.toggle()
                                 return
                             }
-                            
+                            UserDefaults.standard.set(true, forKey: "status")
+                            NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
                             
                         }
                     }) {
@@ -134,5 +151,30 @@ struct SecondPage: View{
             }.foregroundColor(.orange)
             
         }.padding()
+            .alert(isPresented: $alert) {
+                Alert(title: Text("Error"), message: Text(self.msg), dismissButton: .default(Text("Ok")))
+        }
+    }
+}
+
+struct HomeView: View {
+    var body: some View {
+        VStack (spacing: 30){
+            HStack{
+                Text("< Home")
+                Spacer()
+                Button(action: {
+                    try! Auth.auth().signOut()
+                    UserDefaults.standard.set(false, forKey: "status")
+                    NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
+                    
+                }, label: {
+                    Text("Logout")
+                })
+            };Spacer()
+            Text("Welcome").font(.largeTitle).fontWeight(.heavy).foregroundColor(.green)
+            Image("pic")
+            Text("Here We Are...").font(.title).fontWeight(.heavy).foregroundColor(.gray)
+        }
     }
 }
